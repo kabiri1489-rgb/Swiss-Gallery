@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SWISS GALLERY | Luxury Swiss Watches</title>
+
+    <!-- ===== Fonts ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- ===== Font Awesome for Icons ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- ===== Styles ===== -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ============================================================
+    HEADER – Glassmorphism with scroll effects
+    ============================================================ -->
+    <header id="header" class="header">
+        <div class="container header__container">
+            <!-- Logo -->
+            <a href="#" class="header__logo">SWISS GALLERY</a>
+
+            <!-- Navigation -->
+            <nav class="header__nav" id="mainNav">
+                <ul class="header__nav-list">
+                    <li><a href="#hero" class="header__nav-link active">خانه</a></li>
+                    <li><a href="#collection" class="header__nav-link">مجموعه</a></li>
+                    <li><a href="#brands" class="header__nav-link">برندها</a></li>
+                    <li><a href="#about" class="header__nav-link">درباره ما</a></li>
+                    <li><a href="#contact" class="header__nav-link">تماس</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Toggle -->
+            <button class="header__toggle" id="navToggle" aria-label="منو">
+                <span class="header__toggle-line"></span>
+                <span class="header__toggle-line"></span>
+                <span class="header__toggle-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    HERO – Full viewport with <picture> and multi-layer overlay
+    ============================================================ -->
+    <section id="hero" class="hero">
+        <!-- Responsive picture -->
+        <picture class="hero__picture">
+            <source media="(max-width: 768px)" srcset="hero-mobile.png" />
+            <source media="(min-width: 769px)" srcset="hero-desktop.png" />
+            <img src="hero-desktop.png" alt="SWISS GALLERY Luxury Watches" class="hero__image" />
+        </picture>
+
+        <!-- Multi-layer overlay -->
+        <div class="hero__overlay"></div>
+
+        <!-- Mouse glow (JS controlled) -->
+        <div class="hero__mouse-glow"></div>
+
+        <!-- Content -->
+        <div class="container hero__content">
+            <h1 class="hero__title">SWISS GALLERY</h1>
+            <p class="hero__subtitle">ساعت‌های لوکس سوئیسی<br />برای زیبایی‌های جاودان</p>
+            <a href="#collection" class="hero__btn">
+                مشاهده مجموعه
+                <span class="btn-shine"></span>
+            </a>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="hero__scroll">
+            <span class="hero__scroll-text">پیمایش</span>
+            <span class="hero__scroll-line"></span>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FEATURED COLLECTION – 4 watch cards with premium glass effect
+    ============================================================ -->
+    <section id="collection" class="collection section">
+        <div class="container">
+            <!-- Section heading -->
+            <div class="section__heading">
+                <span class="section__tag">مجموعه ویژه</span>
+                <h2 class="section__title">برترین ساعت‌های سوئیسی</h2>
+                <p class="section__desc">انتخابی از نفیس‌ترین و دقیق‌ترین ساعت‌های جهان</p>
+            </div>
+
+            <!-- Cards grid -->
+            <div class="collection__grid">
+
+                <!-- Card 1 – Longines Spirit Zulu Time -->
+                <article class="collection__card" data-delay="0">
+                    <div class="collection__card-inner">
+                        <div class="collection__card-image">
+                            <img src="watch1.png" alt="Longines Spirit Zulu Time" loading="lazy" />
+                            <div class="image-sweep"></div>
+                        </div>
+                        <div class="collection__card-body">
+                            <h3 class="collection__card-title">Longines Spirit Zulu Time</h3>
+                            <p class="collection__card-price">$3,200</p>
+                            <a href="#" class="collection__card-link">اطلاعات بیشتر</a>
+                        </div>
+                        <div class="card-border-anim"></div>
+                    </div>
+                </article>
+
+                <!-- Card 2 – Longines Master Collection Moonphase -->
+                <article class="collection__card" data-delay="100">
+                    <div class="collection__card-inner">
+                        <div class="collection__card-image">
+                            <img src="watch2.png" alt="Longines Master Collection Moonphase" loading="lazy" />
+                            <div class="image-sweep"></div>
+                        </div>
+                        <div class="collection__card-body">
+                            <h3 class="collection__card-title">Longines Master Collection Moonphase</h3>
+                            <p class="collection__card-price">$4,100</p>
+                            <a href="#" class="collection__card-link">اطلاعات بیشتر</a>
+                        </div>
+                        <div class="card-border-anim"></div>
+                    </div>
+                </article>
+
+                <!-- Card 3 – Oris Aquis Date -->
+                <article class="collection__card" data-delay="200">
+                    <div class="collection__card-inner">
+                        <div class="collection__card-image">
+                            <img src="watch3.png" alt="Oris Aquis Date" loading="lazy" />
+                            <div class="image-sweep"></div>
+                        </div>
+                        <div class="collection__card-body">
+                            <h3 class="collection__card-title">Oris Aquis Date</h3>
+                            <p class="collection__card-price">$2,400</p>
+                            <a href="#" class="collection__card-link">اطلاعات بیشتر</a>
+                        </div>
+                        <div class="card-border-anim"></div>
+                    </div>
+                </article>
+
+                <!-- Card 4 – Oris ProPilot X Kermit Edition -->
+                <article class="collection__card" data-delay="300">
+                    <div class="collection__card-inner">
+                        <div class="collection__card-image">
+                            <img src="watch4.png" alt="Oris ProPilot X Kermit Edition" loading="lazy" />
+                            <div class="image-sweep"></div>
+                        </div>
+                        <div class="collection__card-body">
+                            <h3 class="collection__card-title">Oris ProPilot X Kermit Edition</h3>
+                            <p class="collection__card-price">$4,700</p>
+                            <a href="#" class="collection__card-link">اطلاعات بیشتر</a>
+                        </div>
+                        <div class="card-border-anim"></div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    LUXURY BRANDS – 3 logos with gold hover
+    ============================================================ -->
+    <section id="brands" class="brands section">
+        <div class="container">
+            <div class="section__heading">
+                <span class="section__tag">برندهای لوکس</span>
+                <h2 class="section__title">همراه با بهترین‌ها</h2>
+                <p class="section__desc">نمادهای اصالت و کیفیت سوئیسی</p>
+            </div>
+
+            <div class="brands__grid">
+                <!-- Longines -->
+                <div class="brands__item">
+                    <img src="longines.png" alt="Longines" loading="lazy" class="brands__logo" />
+                    <span class="brands__name">Longines</span>
+                </div>
+                <!-- Oris -->
+                <div class="brands__item">
+                    <img src="oris.png" alt="Oris" loading="lazy" class="brands__logo" />
+                    <span class="brands__name">Oris</span>
+                </div>
+                <!-- Tissot -->
+                <div class="brands__item">
+                    <img src="tissot.png" alt="Tissot" loading="lazy" class="brands__logo" />
+                    <span class="brands__name">Tissot</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    ABOUT – Image + text with luxury layout
+    ============================================================ -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="about__wrapper">
+                <!-- Image -->
+                <figure class="about__image-wrapper">
+                    <img src="about.png" alt="Swiss Gallery Boutique" loading="lazy" class="about__image" />
+                </figure>
+                <!-- Text -->
+                <div class="about__content">
+                    <span class="section__tag">درباره ما</span>
+                    <h2 class="section__title">هنر ساعت‌سازی سوئیسی</h2>
+                    <p class="about__text">
+                        SWISS GALLERY بیش از یک فروشگاه ساعت است؛ ما سفیری برای فرهنگ،
+                        دقت و زیبایی‌های جاودان صنعت ساعت‌سازی سوئیس هستیم. هر قطعه
+                        در مجموعه ما با عشق و احترام به میراثی ۲۰۰ ساله انتخاب شده است.
+                    </p>
+                    <p class="about__text">
+                        از کارگاه‌های کوچک انحصاری تا برندهای بزرگ جهانی، ما تنها
+                        آثاری را عرضه می‌کنیم که روح سوئیس را در خود دارند.
+                    </p>
+                    <a href="#" class="about__btn">بیشتر بدانید</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    SWISS CRAFTSMANSHIP – Image + 4 features
+    ============================================================ -->
+    <section id="craftsmanship" class="craftsmanship section">
+        <div class="container">
+            <div class="craftsmanship__wrapper">
+                <!-- Image -->
+                <figure class="craftsmanship__image-wrapper">
+                    <img src="craftsmanship.png" alt="Swiss Craftsmanship" loading="lazy" class="craftsmanship__image" />
+                </figure>
+                <!-- Features -->
+                <div class="craftsmanship__content">
+                    <span class="section__tag">صنعت سوئیس</span>
+                    <h2 class="section__title">تعهد به برتری</h2>
+
+                    <ul class="craftsmanship__features">
+                        <li class="craftsmanship__feature">
+                            <span class="craftsmanship__feature-icon">⚙️</span>
+                            <div>
+                                <h4>ساخت سوئیس</h4>
+                                <p>هر قطعه با استانداردهای دقیق سوئیسی تولید شده است.</p>
+                            </div>
+                        </li>
+                        <li class="craftsmanship__feature">
+                            <span class="craftsmanship__feature-icon">💎</span>
+                            <div>
+                                <h4>کیفیت ممتاز</h4>
+                                <p>فقط بهترین مواد اولیه و ماهرترین صنعتگران.</p>
+                            </div>
+                        </li>
+                        <li class="craftsmanship__feature">
+                            <span class="craftsmanship__feature-icon">⏱️</span>
+                            <div>
+                                <h4>دقت مادام‌العمر</h4>
+                                <p>دقت بی‌نظیر در هر ثانیه، برای تمام عمر.</p>
+                            </div>
+                        </li>
+                        <li class="craftsmanship__feature">
+                            <span class="craftsmanship__feature-icon">🏛️</span>
+                            <div>
+                                <h4>تجربه لوکس</h4>
+                                <p>خریدی که فراتر از یک محصول، یک تجربه است.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    CONTACT – Glass card with Google Map placeholder
+    ============================================================ -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section__heading">
+                <span class="section__tag">تماس با ما</span>
+                <h2 class="section__title">در ارتباط باشید</h2>
+                <p class="section__desc">ما همواره آماده پاسخگویی به شما هستیم</p>
+            </div>
+
+            <div class="contact__card">
+                <div class="contact__info">
+                    <div class="contact__item">
+                        <i class="fas fa-map-marker-alt contact__icon"></i>
+                        <div>
+                            <h4>آدرس</h4>
+                            <p>اصفهان، خیابان نظشر شرقی</p>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <i class="fas fa-phone contact__icon"></i>
+                        <div>
+                            <h4>تلفن</h4>
+                            <p>+98 31 1234 5678</p>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <i class="fas fa-envelope contact__icon"></i>
+                        <div>
+                            <h4>ایمیل</h4>
+                            <p>info@swissgallery.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Map Placeholder -->
+                <div class="contact__map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3176.1839428562166!2d51.6747305!3d32.6543976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fbc35e3e3e3e3e3%3A0x3fbc35e3e3e3e3e3!2sIsfahan!5e0!3m2!1sen!2s!4v1700000000000"
+                        width="100%"
+                        height="200"
+                        style="border:0; border-radius: 12px;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER – Premium redesign with AMIR0WEB credit
+    ============================================================ -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <!-- Logo -->
+            <a href="#hero" class="footer__logo">SWISS GALLERY</a>
+
+            <!-- Description -->
+            <p class="footer__desc">ساعت‌های نفیس سوئیسی با اصالت ۲۰۰ ساله در قلب ایران</p>
+
+            <!-- Gold divider -->
+            <div class="footer__divider"></div>
+
+            <!-- Social Icons -->
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer__links">
+                <a href="#hero">خانه</a>
+                <a href="#collection">مجموعه</a>
+                <a href="#brands">برندها</a>
+                <a href="#about">درباره ما</a>
+                <a href="#contact">تماس</a>
+            </div>
+
+            <!-- Copyright -->
+            <p class="footer__copy">&copy; 2026 SWISS GALLERY. تمامی حقوق محفوظ است.</p>
+
+            <!-- AMIR0WEB Credit (prominent) -->
+            <div class="footer__credit">
+                <p class="footer__credit-text">طراحی و توسعه توسط</p>
+                <span class="footer__credit-name">AMIR0WEB</span>
+                <p class="footer__credit-role">Frontend Developer — Crafting Luxury Web Experiences</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+    LOADING SCREEN
+    ============================================================ -->
+    <div class="loading">
+        <span class="loading__logo">SWISS GALLERY</span>
+        <span class="loading__line"></span>
+    </div>
+
+    <!-- ============================================================
+    BACK TO TOP BUTTON
+    ============================================================ -->
+    <button class="back-top" aria-label="بازگشت به بالا">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ============================================================
+    CUSTOM CURSOR (gold circle)
+    ============================================================ -->
+    <div class="cursor">
+        <span class="cursor__dot"></span>
+    </div>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script src="script.js"></script>
+
+</body>
+</html>
